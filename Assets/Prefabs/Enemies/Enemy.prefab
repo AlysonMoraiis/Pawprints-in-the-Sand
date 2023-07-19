@@ -160,4 +160,4 @@ MonoBehaviour:
   _bullet: {fileID: 4257795998461261293, guid: ef2b975ddc818184b9f85cd3ac3c22f4, type: 3}
   _bulletPosition: {fileID: 8761168083651834869}
   _distanceToShoot: 8
-  _shootCooldown: 1.5
+  _shootCooldown: 2
