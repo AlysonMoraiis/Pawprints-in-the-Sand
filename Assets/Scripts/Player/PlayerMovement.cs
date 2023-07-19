@@ -7,7 +7,12 @@ public class PlayerMovement : MonoBehaviour
 {
 
     [SerializeField] private float _speed;
+    [SerializeField] private ParticleSystem _dustParticlePrefab;
+    [SerializeField] private Transform _dustLocation;
 
+
+    private float _dustInstantiateTime = 0.6f;
+    private float _dustLastTime;
     private Rigidbody2D _rigidbody;
     private Vector2 _movement;
 
@@ -23,6 +28,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (_movement.magnitude > 0)
+        {
+            Instantiate(_dustParticlePrefab, _dustLocation.position, _dustLocation.rotation);
+            _dustLastTime = Time.time;
+        }
+
         _rigidbody.velocity = new Vector2(_movement.x * _speed, _movement.y * _speed);
     }
 }
