@@ -1,20 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private int _maxHealth;
+    [SerializeField] private PlayerData _playerData;
 
     private SpriteRenderer _spriteRenderer;
 
-    private int _health;
+    private bool _canDamage = true;
 
-    void Start()
+    [HideInInspector] public int _health;
+    public event Action OnHealthChange;
+
+    private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
-
-        _health = _maxHealth;
+        _health = _playerData.PlayerMaxHealth;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -26,29 +29,32 @@ public class PlayerHealth : MonoBehaviour
 
         if (other.gameObject.CompareTag("CollectableHealth"))
         {
-            if (_health <= _maxHealth)
-            {
-                _health += 1;
-            }
+            Healing();
         }
     }
 
     private void TakeDamage()
     {
-        _health -= 1;
-
-        if (_health <= 0)
+        if (_canDamage)
         {
-            Debug.Log("Death");
-        }
+            _health -= 1;
+            OnHealthChange?.Invoke();
 
-        StartCoroutine(DamageFlash());
+            if (_health <= 0)
+            {
+                _health = 0;
+                Debug.Log("Death");
+            }
+
+            StartCoroutine(DamageFlash());
+        }
     }
 
     private IEnumerator DamageFlash()
     {
         int flashs = 3;
         float flashDuration = 0.05f;
+        _canDamage = false;
 
         for (int i = 0; i < flashs; i++)
         {
@@ -57,5 +63,19 @@ public class PlayerHealth : MonoBehaviour
             _spriteRenderer.color = Color.white;
             yield return new WaitForSeconds(flashDuration);
         }
+
+        _canDamage = true;
     }
+
+    private void Healing()
+    {
+        _health += 1;
+        if (_health > _playerData.PlayerMaxHealth)
+        {
+            _health = _playerData.PlayerMaxHealth;
+        }
+
+        OnHealthChange?.Invoke();
+    }
+
 }

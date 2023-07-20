@@ -5,11 +5,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-
-    [SerializeField] private float _speed;
+    [SerializeField] private PlayerData _playerData;
     [SerializeField] private ParticleSystem _dustParticlePrefab;
     [SerializeField] private Transform _dustLocation;
-
 
     private float _dustInstantiateTime = 0.6f;
     private float _dustLastTime;
@@ -34,6 +32,6 @@ public class PlayerMovement : MonoBehaviour
             _dustLastTime = Time.time;
         }
 
-        _rigidbody.velocity = new Vector2(_movement.x * _speed, _movement.y * _speed);
+        _rigidbody.velocity = _movement * _playerData.PlayerSpeed;
     }
 }

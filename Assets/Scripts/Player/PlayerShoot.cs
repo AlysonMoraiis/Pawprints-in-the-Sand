@@ -3,9 +3,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerShoot : MonoBehaviour
 {
-    [SerializeField] private float _bulletSpeed;
-    [SerializeField] private float _fireCooldown;
     [SerializeField] private GameObject _bulletPrefab;
+    [SerializeField] private PlayerData _playerData;
 
     private bool _isShooting;
     private Vector2 _shootDirection;
@@ -47,9 +46,10 @@ public class PlayerShoot : MonoBehaviour
         SetShootRotation(x, y);
         bullet.transform.rotation = SetShootRotation(x, y);
         bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(
-            (x < 0) ? Mathf.Floor(x) * _bulletSpeed : Mathf.Ceil(x) * _bulletSpeed,
-            (y < 0) ? Mathf.Floor(y) * _bulletSpeed : Mathf.Ceil(y) * _bulletSpeed
+            (x < 0) ? Mathf.Floor(x) * _playerData.BulletSpeed : Mathf.Ceil(x) * _playerData.BulletSpeed + Random.Range(1f, -1f),
+            (y < 0) ? Mathf.Floor(y) * _playerData.BulletSpeed : Mathf.Ceil(y) * _playerData.BulletSpeed + Random.Range(1f, -1f)
         );
+
     }
 
     private Quaternion SetShootRotation(float x, float y)
@@ -74,7 +74,7 @@ public class PlayerShoot : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Time.time > _lastFire + _fireCooldown && _isShooting)
+        if (Time.time > _lastFire + _playerData.FireCooldown && _isShooting)
         {
             Shoot(_shootDirection.x, _shootDirection.y);
             _lastFire = Time.time;

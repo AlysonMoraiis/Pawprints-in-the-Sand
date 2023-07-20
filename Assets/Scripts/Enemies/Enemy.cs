@@ -5,12 +5,15 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private int _health;
+    [SerializeField] private Material _flashMaterial;
+    private Material _defaultMaterial;
 
     private SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _defaultMaterial = _spriteRenderer.material;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -40,9 +43,9 @@ public class Enemy : MonoBehaviour
 
         for (int i = 0; i < flashs; i++)
         {
-            _spriteRenderer.color = Color.red;
+            _spriteRenderer.material = _flashMaterial;
             yield return new WaitForSeconds(flashDuration);
-            _spriteRenderer.color = Color.white;
+            _spriteRenderer.material = _defaultMaterial;
             yield return new WaitForSeconds(flashDuration);
         }
     }

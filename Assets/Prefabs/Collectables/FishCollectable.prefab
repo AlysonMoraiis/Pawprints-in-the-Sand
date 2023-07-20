@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2567409447976564846}
   m_Layer: 9
   m_Name: FishCollectable
-  m_TagString: Untagged
+  m_TagString: CollectableHealth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0450449, y: -0.018017977}
+  m_Offset: {x: 0.038439512, y: -0.027926043}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -129,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5135155, y: 0.38739055}
+  m_Size: {x: 0.52672625, y: 0.44683906}
   m_EdgeRadius: 0
 --- !u!114 &2567409447976564846
 MonoBehaviour:

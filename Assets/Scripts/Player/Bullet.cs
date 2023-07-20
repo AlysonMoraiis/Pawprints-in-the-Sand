@@ -17,7 +17,7 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(DestroyGameObject(_timeToDestroy, 0.1f));
+        StartCoroutine(DestroyGameObject(_timeToDestroy, 0.05f));
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -28,10 +28,8 @@ public class Bullet : MonoBehaviour
     private IEnumerator DestroyGameObject(float i, float o)
     {
         yield return new WaitForSeconds(i);
-        _rigidbody.gravityScale = 4;
+        StartCoroutine(SpriteFadeOut(0.1f));
         yield return new WaitForSeconds(o);
-        StartCoroutine(SpriteFadeOut(o));
-        yield return new WaitForSeconds(0.05f);
         Instantiate(_destroyParticlePrefab, transform.position, transform.rotation);
         Destroy(gameObject);
     }
