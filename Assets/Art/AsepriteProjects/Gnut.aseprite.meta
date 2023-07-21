@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5d91f81adbe1aa848af5a16aa60e3388
+guid: b5d364e8e91648f48b2814fb44b3660f
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,38 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Sprite-0001_Frame_0
+  - name: Gnut
     originalName: 
-    pivot: {x: 0.4722222, y: -0.11428572}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 50
-      y: 4
-      width: 36
-      height: 35
-    spriteID: 70d6bb881f0acc44a934d192941cf7de
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 50, y: 4}
-  - name: Sprite-0001_Frame_1
-    originalName: 
-    pivot: {x: 0.5, y: -0.11428572}
+    pivot: {x: 0.625, y: -0.625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 38
-      height: 35
-    spriteID: 4bc421615d20f6540ab630989d52c31e
+      width: 24
+      height: 16
+    spriteID: 6337fd52364715241a94f3d25fdb2a3d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -159,18 +139,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Sprite-0001_Frame_2
+  - name: Gnut_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.11428572}
+    pivot: {x: 0.625, y: -0.625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 47
-      width: 38
-      height: 35
-    spriteID: 1bac12a4a082d814e935bce9ff55723e
+      y: 28
+      width: 24
+      height: 16
+    spriteID: 6020c01ad5052c243a0278d3de84d03f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -178,43 +158,35 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 47}
+    uvTransform: {x: 4, y: 28}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -572921211
-    name: Sprite-0001
+    guid: -1806020438
+    name: Gnut
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Sprite-0001_Frame_0
+    - name: Gnut_Frame_0
       frameIndex: 0
       cellRect:
-        x: 8
-        y: 4
-        width: 36
-        height: 35
-      spriteId: 70d6bb881f0acc44a934d192941cf7de
-    - name: Sprite-0001_Frame_1
+        x: 1
+        y: 10
+        width: 24
+        height: 16
+      spriteId: 6337fd52364715241a94f3d25fdb2a3d
+    - name: Gnut_Frame_1
       frameIndex: 1
       cellRect:
-        x: 6
-        y: 4
-        width: 38
-        height: 35
-      spriteId: 4bc421615d20f6540ab630989d52c31e
-    - name: Sprite-0001_Frame_2
-      frameIndex: 2
-      cellRect:
-        x: 6
-        y: 4
-        width: 38
-        height: 35
-      spriteId: 1bac12a4a082d814e935bce9ff55723e
+        x: 1
+        y: 10
+        width: 24
+        height: 16
+      spriteId: 6020c01ad5052c243a0278d3de84d03f
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 50, y: 40}
+  canvasSize: {x: 32, y: 32}

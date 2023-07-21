@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bf9cd59712edc8c49a3535025bb531e7
+guid: d011acd209fd39d49a69c10ed9452268
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GreenPoopShooter_0
+      name: Fly_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 50
-        height: 40
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41edbaaa0110bd34985cc14514c27a88
-      internalID: 876246248
+      spriteID: 267f9569e4079f9469b5d541273d6d01
+      internalID: 580859256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenPoopShooter_1
+      name: Fly_1
       rect:
         serializedVersion: 2
-        x: 50
+        x: 32
         y: 0
-        width: 50
-        height: 40
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,29 +171,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8743f84df9b442043909e03394cc60b6
-      internalID: 1745701985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GreenPoopShooter_2
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 0
-        width: 50
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff2699417f5d4d24aad4c7dad7c27ae9
-      internalID: 1205610491
+      spriteID: 979d23913e0bbd743b965a72169ee608
+      internalID: -1074288904
       vertices: []
       indices: 
       edges: []
@@ -209,9 +188,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GreenPoopShooter_0: 876246248
-      GreenPoopShooter_1: 1745701985
-      GreenPoopShooter_2: 1205610491
+      Fly_0: 580859256
+      Fly_1: -1074288904
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
