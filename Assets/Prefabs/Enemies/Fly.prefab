@@ -12,9 +12,12 @@ GameObject:
   - component: {fileID: 159925635613068659}
   - component: {fileID: 1532826246295768375}
   - component: {fileID: 5878484833285328023}
-  m_Layer: 0
-  m_Name: Gnut
-  m_TagString: Untagged
+  - component: {fileID: 6457540047928840499}
+  - component: {fileID: 5860186854737553213}
+  - component: {fileID: 7345935505031619887}
+  m_Layer: 8
+  m_Name: Fly
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1886283762, guid: 854b005b15cc0a84c942858180064db6, type: 3}
+  m_Sprite: {fileID: 580859256, guid: d011acd209fd39d49a69c10ed9452268, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -136,7 +139,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.049822807, y: 0.078508794}
@@ -152,3 +155,51 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5923581, y: 0.3477732}
   m_EdgeRadius: 0
+--- !u!114 &6457540047928840499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146058452640861163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd621c40bd7a8b41aa5e9b97e4019b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 2
+  _flashMaterial: {fileID: 2100000, guid: c4e63f87117410546a8ed0b0f7563825, type: 2}
+--- !u!195 &5860186854737553213
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146058452640861163}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.01
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &7345935505031619887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146058452640861163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ac88d70edf3684d9aa90bf675ef152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
