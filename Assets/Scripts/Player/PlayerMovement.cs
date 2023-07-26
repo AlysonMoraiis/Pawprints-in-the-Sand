@@ -22,6 +22,11 @@ public class PlayerMovement : MonoBehaviour
     public void SetMovement(InputAction.CallbackContext value)
     {
         _movement = value.ReadValue<Vector2>().normalized;
+        
+        if(_movement.y != 0)
+        {
+            _movement.x += Mathf.Sign(_movement.y) * 0.001f;
+        }
     }
 
     private void FixedUpdate()

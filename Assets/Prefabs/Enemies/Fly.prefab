@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd621c40bd7a8b41aa5e9b97e4019b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 2
+  _health: 3
   _flashMaterial: {fileID: 2100000, guid: c4e63f87117410546a8ed0b0f7563825, type: 2}
 --- !u!195 &5860186854737553213
 NavMeshAgent:
@@ -179,7 +179,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.01
-  m_Speed: 3.5
+  m_Speed: 2.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -203,3 +203,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ac88d70edf3684d9aa90bf675ef152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _detectDistance: 5
+  _stopChaseDistance: 10

@@ -8,6 +8,9 @@ TagManager:
   - Bullet
   - Wall
   - CollectableHealth
+  - Walkable
+  - SpawnPoint
+  - Rooms
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - Bullet
   - Enemy
   - Collectable
-  - 
+  - DestroyerPoint
   - 
   - 
   - 
