@@ -955,6 +955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _openingDirection: 4
+  _waitTime: 4
 --- !u!1 &8408623555895330125
 GameObject:
   m_ObjectHideFlags: 0
